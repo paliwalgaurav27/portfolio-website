@@ -1,0 +1,149 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Main Game Container */
+  .container {
+    background-color: #fff;
+    border: 3px solid #2f3542;
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  /* Title */
+  h1 {
+    font-size: 2.5rem;
+    color: #2f3542;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  /* Choices Container */
+  .choices {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+  
+  /* Individual Choice Styling */
+  .choice {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .choice:hover {
+    transform: scale(1.15);
+  }
+  
+  .choice img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #2f3542;
+    transition: border 0.3s ease;
+  }
+  
+  .choice:hover img {
+    border-color: #ff4757;
+  }
+  
+  /* Score Board Styling */
+  .score-board {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .score {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .score p {
+    font-size: 2rem;
+    margin: 5px;
+    color: #57606f;
+    font-weight: 600;
+  }
+  
+  /* Message Container */
+  .msg-container {
+    margin-top: 20px;
+  }
+  
+  #msg {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2f3542;
+  }
+  
+  /* Container Box Styling */
+  .container-box {
+    border: 2px dashed #57606f;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: #f1f2f6;
+  }
+  
+  .container-box h2 {
+    font-size: 1.8rem;
+    color: #3742fa;
+    font-weight: 600;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .choice img {
+      width: 60px;
+      height: 60px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .score p {
+      font-size: 1.5rem;
+    }
+  
+    #msg {
+      font-size: 1.2rem;
+    }
+  }
+/* Style for Font Awesome icons */
+.choice i {
+    font-size: 5rem; /* Size of the icons */
+    color: #2f3542;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .choice:hover i {
+    color: #ff4757;
+    transform: scale(1.15); /* Enlarge on hover */
+  }
+    

@@ -1,0 +1,714 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #d7afaf; /* Light background color */
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #bccbde; /* Updated background color */
+}
+
+
+/* Header Styles */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px 20px; /* Adjust padding for appropriate header height */
+    color: white;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Ensure the logo stays on the left */
+}
+
+.logo img {
+    height: 40px; /* Adjust height of logo image */
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 20px; /* Adjust font size of logo text */
+    margin: 0;
+}
+
+.main-nav {
+    margin-left: auto; /* Pushes navigation to the right */
+}
+
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav li {
+    margin: 0 10px; /* Adjusted margin for spacing between nav items */
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px; /* Adjust font size for nav links */
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons img {
+    height: 25px; /* Adjust height of icons if needed */
+    margin-left: 15px;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+/* Banner Section */
+.banner {
+    position: relative;
+    text-align: center;
+    overflow: hidden; /* Hide any overflow from the image */
+}
+
+.banner img {
+    width: 100%; /* Ensure the image covers the full width */
+    height: 50vh; /* Set the height to 50% of the viewport height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    display: block;
+    margin: 0 auto;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(12, 15, 1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-text h2 {
+    font-size: 60px;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.banner-text p {
+    font-size: 30px;
+    margin: 10px 0 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Updated Categories Section */
+.categories {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.category-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.category-item {
+    width: 18%; /* Adjust width to fit 5 items in a row with space between */
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* For ::before and ::after positioning */
+}
+
+.category-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensure image covers the area without distortion */
+}
+
+.category-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.text-box {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.see-more-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.see-more-button:hover {
+    background-color: #555;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+/* Categories Section Heading */
+.categories h2 {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 3px solid #4CAF50; /* Green border color */
+    border-radius: 12px; /* Rounded corners */
+    background-color: #ffffff; /* White background color */
+    color: #333; /* Dark text color */
+    font-size: 28px; /* Larger font size for emphasis */
+    font-weight: bold; /* Bold text */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for depth */
+    margin-bottom: 20px; /* Space below the heading */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a lifted effect */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.categories h2:hover {
+    border-color: #388E3C; /* Darker green on hover */
+    background-color: #f1f8e9; /* Light green background on hover */
+    color: #000; /* Darker text color on hover */
+    transform: scale(1.05); /* Slightly enlarge the heading on hover */
+}
+
+
+
+/* .draw effect styles */
+.draw {
+    position: relative;
+    padding: 10px; /* Ensure padding is applied to draw */
+    transition: color 0.25s;
+}
+
+.draw::before,
+.draw::after {
+    content: '';
+    position: absolute;
+    border: 4px solid transparent;
+    width: 0;
+    height: 0;
+}
+
+.draw::before {
+    top: 0;
+    left: 0;
+}
+
+.draw::after {
+    bottom: 0;
+    right: 0;
+}
+
+.draw:hover::before,
+.draw:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.draw:hover::before {
+    border-top-color: #ff7f50; /* Coral */
+    border-right-color: #ff7f50; /* Coral */
+    transition:
+        width 0.25s ease-out,
+        height 0.25s ease-out 0.25s;
+}
+
+.draw:hover::after {
+    border-bottom-color: #6495ed; /* Cornflower Blue */
+    border-left-color: #6495ed; /* Cornflower Blue */
+    transition:
+        border-color 0s ease-out 0.5s,
+        width 0.25s ease-out 0.5s,
+        height 0.25s ease-out 0.75s;
+}
+
+/* Featured Products Section */
+.featured-products {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    width: 22%;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensure image covers the area without distortion */
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.buy-now-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.buy-now-button:hover {
+    background-color: #555;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+/* Featured Products Section Heading */
+.featured-products h2 {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 3px solid #FF5722; /* Orange border color */
+    border-radius: 12px; /* Rounded corners */
+    background-color: #ffffff; /* White background color */
+    color: #333; /* Dark text color */
+    font-size: 28px; /* Larger font size for emphasis */
+    font-weight: bold; /* Bold text */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for depth */
+    margin-bottom: 20px; /* Space below the heading */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a lifted effect */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.featured-products h2:hover {
+    border-color: #E64A19; /* Darker orange on hover */
+    background-color: #fff3e0; /* Light orange background on hover */
+    color: #000; /* Darker text color on hover */
+    transform: scale(1.05); /* Slightly enlarge the heading on hover */
+}
+
+
+/* Order Customized Items Section */
+.order-customized {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.order-customized-text {
+    display: inline-block;
+    width: 60%;
+}
+
+.order-now-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.order-now-button:hover {
+    background-color: #555;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.order-customized-images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.order-customized-images img {
+    width: 48%; /* Adjust width to fit two images side by side with space between */
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Category Sub-Sections Styles */
+.category-subsections {
+    margin: 40px 0;
+}
+
+.category-subsection {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.category-subsection h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 3px solid #4CAF50; /* Green border color */
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.subcategory-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust gap between elements */
+}
+
+.subcategory-images-left, .subcategory-images-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.subcategory-images-left img, .subcategory-images-right img {
+    width: 500px; /* Adjust width to fill the space */
+    height: 300px; /* Adjust height to fill the space */
+    border: 2px solid #4CAF50; /* Green border color */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Ensure image covers the area without distortion */
+}
+
+.customize-box {
+    width: 250px; /* Adjust width of the card/box in between */
+    height: 300px;
+    padding: 20px;
+    border: 2px solid #FF5733; /* Colorful border color */
+    border-radius: 8px;
+    background-color: #FFF9E3; /* Light matching background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.customize-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.customize-box p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.customize-now-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.customize-now-button:hover {
+    background-color: #555;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-media-links {
+    margin-bottom: 10px;
+}
+
+.footer-icon {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-icon:hover {
+    opacity: 0.8;
+}
+
+.footer-credits {
+    margin: 0;
+}
+
+.footer-credits a {
+    color: #4CAF50; /* Green color for the link */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-credits a:hover {
+    text-decoration: underline;
+}
+
+/* General Styles for Buttons with Glowing Effect */
+.glow-on-hover {
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-size: 16px; /* Adjust font size for consistency */
+    line-height: 50px; /* Center text vertically */
+    text-align: center; /* Center text horizontally */
+    transition: color 0.3s ease-in-out;
+    padding: 10px 20px; /* Ensure padding is consistent with previous buttons */
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000;
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+/* Apply Glowing Effect to Order Now Button */
+.order-now-button.glow-on-hover {
+    width: 60%; /* Adjusted width to match previous size */
+    max-width: 220px; /* Optional max-width for consistency */
+}
+
+/* Apply Glowing Effect to Buy Now Button */
+.buy-now-button.glow-on-hover {
+    width: 22%; /* Adjusted width to match previous size */
+    max-width: 220px; /* Optional max-width for consistency */
+}
+
+/* Container for Category Sub-Sections */
+.category-subsections-container {
+    border: 2px solid #ddd; /* Light border color for the container */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff; /* Background color for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a lifted effect */
+    margin-bottom: 40px; /* Margin below the container */
+}
+
+/* Category Sub-Section Heading */
+.category-subsection h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 3px solid #FF5722; /* Orange border color for consistency with featured products */
+    padding-bottom: 10px;
+    display: inline-block;
+    font-weight: bold; /* Ensure bold text */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for depth */
+}
+
+/* Category Sub-sections */
+.category-section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.category-section h3 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.category-images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.category-images img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.category-images img:hover {
+    transform: scale(1.05);
+}
+
+.customize-card {
+    width: 200px;
+    padding: 20px;
+    background-color: #e0f7fa;
+    border: 1px solid #b2ebf2;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px auto;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.customize-card:hover {
+    background-color: #b2ebf2;
+    transform: scale(1.05);
+}
+
+.customize-card h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.customize-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.customize-btn {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.customize-btn:hover {
+    background-color: #004d40;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333; /* Dark background color */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    position: relative; /* Ensure it aligns correctly with the page */
+    width: 100%; /* Full width */
+    bottom: 0; /* Align to the bottom of the page */
+}
+
+.footer-content {
+    max-width: 1200px; /* Maximum width for the content */
+    margin: 0 auto; /* Center align the content */
+}
+
+.footer-content p {
+    margin: 0; /* Remove default margin */
+    font-size: 16px; /* Font size for text */
+}
+
+.footer-link {
+    color: white;
+    text-decoration: underline; /* Underline text */
+    font-weight: bold;
+}
+
+.footer-link:hover {
+    text-decoration: none; /* Remove underline on hover */
+}
+
+.footer-icon {
+    color: white;
+    font-size: 20px; /* Adjust icon size */
+    margin: 10px 0; /* Margin around the icon */
+    text-decoration: none;
+}
+
+.footer-icon:hover {
+    opacity: 0.8;
+}
+
+
+.customize-box p {
+    font-size: 20px;
+    color: #24a098;
+}
+
+.customize-box {
+    background-color: #F7F7F7;
+}

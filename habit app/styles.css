@@ -1,0 +1,113 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f0f4c3, #e1bee7);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid #4caf50;
+}
+
+h1 {
+    text-align: center;
+    color: #4caf50;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#habit-input {
+    padding: 12px;
+    width: 70%;
+    border: 2px solid #4caf50;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: border-color 0.3s;
+}
+
+#habit-input:focus {
+    border-color: #81c784;
+    outline: none;
+}
+
+#add-habit {
+    padding: 12px 20px;
+    margin-left: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#add-habit:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+#habit-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#habit-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+    background-color: #f1f8e9;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+#habit-list li:hover {
+    background-color: #dcedc8;
+}
+
+#habit-list li input[type="checkbox"] {
+    margin-right: 15px;
+}
+
+#habit-list li button {
+    background-color: #e53935;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#habit-list li button:hover {
+    background-color: #c62828;
+    transform: scale(1.05);
+}
+
+#stats {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#stats p {
+    margin: 5px 0;
+    font-size: 18px;
+}
